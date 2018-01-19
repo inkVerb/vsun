@@ -1,0 +1,34 @@
+#!/bin/sh
+# vSun app, verb.ink
+set -e
+
+# This installs vSun
+## Checks prerequesites
+## Creates directories
+## Sets crontasks
+
+
+# Directories and links
+if [ ! -d "/var/local/vsun" ]; then
+echo "Not installed correctly. You must put the directory \"vsun\" in \"/var/local/\" first."
+exit 22; fi
+mkdir -p /var/local/vsun/archive/dl/eit
+mkdir -p /var/local/vsun/octave/ln/eit
+mkdir -p /var/local/vsun/octave/out/eit
+ln -sfn /var/local/vsun ~/
+
+# Prepare the script
+chmod +x dailyvsun.sh
+
+# Set the cron job
+cp /var/local/vsun/vsun.cron.d /etc/cron.d/vsun
+
+# Cleanup
+rm /var/local/vsun/INSTALL
+rm /var/local/vsun/installvsun
+
+# Finish
+echo "All set. vSun is now running on your machine every day at 02:00 and 14:00.
+
+Saved files are in /var/local/vsun/archive/dl/eit/"
+

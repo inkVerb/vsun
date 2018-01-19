@@ -1,0 +1,10 @@
+# vSun app from verb.ink
+
+# To install
+1. Put "vsun" in "/var/local/"
+2. Make the installer executable with:
+`chmod +x installvsun`
+3. Run as root or use sudo:
+`sudo ./installvsun`
+4. You're done. Celebrate with a taco or tea or something.
+
