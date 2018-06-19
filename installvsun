@@ -18,7 +18,7 @@ mkdir -p /var/local/vsun/octave/out/eit
 ln -sfn /var/local/vsun ~/
 
 # Prepare the script
-chmod +x dailyvsun.sh
+chmod +x getvsun.sh
 
 # Set the cron job
 cp /var/local/vsun/vsun.cron.d /etc/cron.d/vsun
